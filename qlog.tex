@@ -1,0 +1,1055 @@
+\documentclass[epsfig,12pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{slashed}
+\usepackage[normalem]{ulem}
+%\usepackage{showlabels}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                     D O C U M E N T   S E T T I N G S                        %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\baselinestretch{1.1}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\hyphenation{con-fi-ning}
+\hyphenation{Cou-lomb}
+\hyphenation{Yan-ki-e-lo-wicz}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                      C O M M O N   D E F I N I T I O N S                     %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\nn{\nonumber}
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+
+
+\newcommand{\nfour}{${\cal N}=4\;$}
+\newcommand{\none}{${\mathcal N}=1\,$}
+\newcommand{\nonen}{${\mathcal N}=1$}
+\newcommand{\ntwo}{${\mathcal N}=2$}
+\newcommand{\ntt}{${\mathcal N}=(2,2)\,$}
+\newcommand{\nzt}{${\mathcal N}=(0,2)\,$}
+\newcommand{\ntwon}{${\mathcal N}=2$}
+\newcommand{\ntwot}{${\mathcal N}= \left(2,2\right) $ }
+\newcommand{\ntwoo}{${\mathcal N}= \left(0,2\right) $ }
+\newcommand{\ntwoon}{${\mathcal N}= \left(0,2\right)$}
+
+
+\newcommand{\ca}{{\mathcal A}}
+\newcommand{\cell}{{\mathcal L}}
+\newcommand{\cw}{{\mathcal W}}
+\newcommand{\cs}{{\mathcal S}}
+\newcommand{\vp}{\varphi}
+\newcommand{\pt}{\partial}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\gs}{g^{2}}
+\newcommand{\zn}{$Z_N$}
+\newcommand{\cd}{${\mathcal D}$}
+\newcommand{\cde}{{\mathcal D}}
+\newcommand{\cf}{${\mathcal F}$}
+\newcommand{\cfe}{{\mathcal F}}
+\newcommand{\ff}{\mc{F}}
+\newcommand{\bff}{\ov{\mc{F}}}
+
+
+\newcommand{\p}{\partial}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ov}{\overline}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\md}{\mathcal{D}}
+\newcommand{\ml}{\mathcal{L}}
+\newcommand{\mw}{\mathcal{W}}
+\newcommand{\ma}{\mathcal{A}}
+
+
+\newcommand{\GeV}{{\rm GeV}}
+\newcommand{\eV}{{\rm eV}}
+\newcommand{\Heff}{{\mathcal{H}_{\rm eff}}}
+\newcommand{\Leff}{{\mathcal{L}_{\rm eff}}}
+\newcommand{\el}{{\rm EM}}
+\newcommand{\uflavor}{\mathbf{1}_{\rm flavor}}
+\newcommand{\lgr}{\left\lgroup}
+\newcommand{\rgr}{\right\rgroup}
+
+
+\newcommand{\Mpl}{M_{\rm Pl}}
+\newcommand{\suc}{{{\rm SU}_{\rm C}(3)}}
+\newcommand{\sul}{{{\rm SU}_{\rm L}(2)}}
+\newcommand{\sutw}{{\rm SU}(2)}
+\newcommand{\suth}{{\rm SU}(3)}
+\newcommand{\ue}{{\rm U}(1)}
+
+
+\newcommand{\LN}{\Lambda_\text{SU($N$)}}
+\newcommand{\sunu}{{\rm SU($N$) $\times$ U(1) }}
+\newcommand{\sunun}{{\rm SU($N$) $\times$ U(1)}}
+\def\cfl {$\text{SU($N$)}_{\rm C+F}$ }
+\def\cfln {$\text{SU($N$)}_{\rm C+F}$}
+\newcommand{\mUp}{m_{\rm U(1)}^{+}}
+\newcommand{\mUm}{m_{\rm U(1)}^{-}}
+\newcommand{\mNp}{m_\text{SU($N$)}^{+}}
+\newcommand{\mNm}{m_\text{SU($N$)}^{-}}
+\newcommand{\AU}{\mc{A}^{\rm U(1)}}
+\newcommand{\AN}{\mc{A}^\text{SU($N$)}}
+\newcommand{\aU}{a^{\rm U(1)}}
+\newcommand{\aN}{a^\text{SU($N$)}}
+\newcommand{\baU}{\ov{a}{}^{\rm U(1)}}
+\newcommand{\baN}{\ov{a}{}^\text{SU($N$)}}
+\newcommand{\lU}{\lambda^{\rm U(1)}}
+\newcommand{\lN}{\lambda^\text{SU($N$)}}
+\newcommand{\bxir}{\ov{\xi}{}_R}
+\newcommand{\bxil}{\ov{\xi}{}_L}
+\newcommand{\xir}{\xi_R}
+\newcommand{\xil}{\xi_L}
+\newcommand{\bzl}{\ov{\zeta}{}_L}
+\newcommand{\bzr}{\ov{\zeta}{}_R}
+\newcommand{\zr}{\zeta_R}
+\newcommand{\zl}{\zeta_L}
+\newcommand{\nbar}{\ov{n}}
+\newcommand{\nnbar}{n\ov{n}}
+\newcommand{\muU}{\mu_\text{U}}
+
+
+\newcommand{\cpn}{CP$^{N-1}$\,}
+\newcommand{\CPC}{CP($N-1$)$\times$C }
+\newcommand{\CPCn}{CP($N-1$)$\times$C}
+
+
+\newcommand{\lar}{\lambda_R}
+\newcommand{\lal}{\lambda_L}
+\newcommand{\larl}{\lambda_{R,L}}
+\newcommand{\lalr}{\lambda_{L,R}}
+\newcommand{\blar}{\ov{\lambda}{}_R}
+\newcommand{\blal}{\ov{\lambda}{}_L}
+\newcommand{\blarl}{\ov{\lambda}{}_{R,L}}
+\newcommand{\blalr}{\ov{\lambda}{}_{L,R}}
+
+
+\newcommand{\bgamma}{\ov{\gamma}}
+\newcommand{\bpsi}{\ov{\psi}{}}
+\newcommand{\bphi}{\ov{\phi}{}}
+\newcommand{\bxi}{\ov{\xi}{}}
+
+
+\newcommand{\qt}{\wt{q}}
+\newcommand{\bq}{\ov{q}}
+\newcommand{\bqt}{\overline{\widetilde{q}}}
+
+
+\newcommand{\eer}{\epsilon_R}
+\newcommand{\eel}{\epsilon_L}
+\newcommand{\eerl}{\epsilon_{R,L}}
+\newcommand{\eelr}{\epsilon_{L,R}}
+\newcommand{\beer}{\ov{\epsilon}{}_R}
+\newcommand{\beel}{\ov{\epsilon}{}_L}
+\newcommand{\beerl}{\ov{\epsilon}{}_{R,L}}
+\newcommand{\beelr}{\ov{\epsilon}{}_{L,R}}
+
+
+\newcommand{\bi}{{\bar \imath}}
+\newcommand{\bj}{{\bar \jmath}}
+\newcommand{\bk}{{\bar k}}
+\newcommand{\bl}{{\bar l}}
+\newcommand{\bmm}{{\bar m}}
+
+
+\newcommand{\nz}{{n^{(0)}}}
+\newcommand{\no}{{n^{(1)}}}
+\newcommand{\bnz}{{\ov{n}{}^{(0)}}}
+\newcommand{\bno}{{\ov{n}{}^{(1)}}}
+\newcommand{\Dz}{{D^{(0)}}}
+\newcommand{\Do}{{D^{(1)}}}
+\newcommand{\bDz}{{\ov{D}{}^{(0)}}}
+\newcommand{\bDo}{{\ov{D}{}^{(1)}}}
+\newcommand{\sigz}{{\sigma^{(0)}}}
+\newcommand{\sigo}{{\sigma^{(1)}}}
+\newcommand{\bsigz}{{\ov{\sigma}{}^{(0)}}}
+\newcommand{\bsigo}{{\ov{\sigma}{}^{(1)}}}
+
+
+\newcommand{\rrenz}{{r_\text{ren}^{(0)}}}
+\newcommand{\bren}{{\beta_\text{ren}}}
+
+
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\Ts}{\text{Ts}}
+\newcommand{\dm}{\hat{{\scriptstyle \Delta} m}}
+\newcommand{\dmdag}{\hat{{\scriptstyle \Delta} m}{}^\dag}
+\newcommand{\mhat}{\widehat{m}}
+\newcommand{\deltam}{{\scriptstyle \Delta} m}
+\newcommand{\nvac}{\vec{n}{}_\text{vac}}
+
+
+\newcommand{\ie}{{\it i.e.}~}
+\newcommand{\eg}{{\it e.g.}~}
+\newcommand{\ansatz}{{\it ansatz} }
+
+
+\newcommand{\ii}{\hat\imath}
+\newcommand{\jj}{\hat\jmath}
+\newcommand{\kk}{\hat k}
+
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cO}{\mathcal{O}}
+
+
+% Make the bullet list symbol a small dot
+\renewcommand{\labelitemi}{{\Large$\cdot$}}
+
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            T I T L E   P A G E                               %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\ \ 
+\vskip 2cm
+\begin{center}
+{  \Large \bf  Quaternionic Logarithm }
+\end{center}
+\vskip 0.5cm
+
+\begin{center}
+
+ {\large
+ \bf   Pavel A.~Bolokhov
+ }
+\end {center}
+
+\begin{center}
+{\it Theoretical Physics Department, St.Petersburg State University, Ulyanovskaya~1, 
+	Peterhof, St.Petersburg, 198504, Russia}
+\end{center}
+
+
+
+
+\begin{center}
+{\large\bf Abstract}
+\end{center}
+
+\hspace{0.3cm}
+	We examine the analytical structure of the quaternionic logarithm and
+	introduce the concepts of linear integration in quaternionic space, coherent
+	with that of the regular complex analysis.
+	Along the way, we bring about the suitable definitions of quaternionic derivatives,
+	leaving aside the longstanding problem of quaternionic analyticity.
+	We briefly discuss possible implications of this analysis for physical scenarios
+
+	We also set the goal of analysis various types of singularities encountered in
+	physics from the quaternionic perspective
+\vspace{2cm}
+
+
+\end{titlepage}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            I N T R O D U C T I O N                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Gateway}
+\setcounter{equation}{0}
+
+	A typical lecture on introductory mathematical physics often includes 
+	a pedagogical derivation of the residue of a holomorphic function,
+\[
+	\oint\, f(z)\,dz	~~=~~	2\,\pi\,i\,\cdot\,\text{Res}\,f(0)\,.
+\]
+	This calculation would typically be done in an explicit approach, by
+	expanding $ f(z) $ into a series (assuming it is expandable),
+\[
+	f(z)	~~=~~	\ldots  ~~+~~  \frac{a_{-2}}{z^2}  ~~+~~  \frac{a_{-1}}{z}  ~~+~~  a_0  ~~+~~ a_1\,z  ~~+~~  a_2\,z^2  ~~+~~  a_3\,z^3  ~~+~~  \ldots\,,
+\]
+	choosing a circular contour around the origin and parametrising it by an 
+	angular variable $ \varphi $.
+	This way,
+\begin{align*}
+%
+	z^n	& ~~=~~	e^{i\, n\, \varphi}\,,	\\[2mm]
+%
+	dz	& ~~=~~	i\,z(\varphi)\,d\varphi\,.
+\end{align*}
+	Then it turns out that the integral of any power of $ z $ vanishes, as $ z $
+	is periodic in $ \varphi $,
+\[
+	i\, a_n\, \int_0^{2\,\pi}\, z^{n \,+\, 1}(\varphi)\, d\varphi	~~=~~	\frac{a_n}{n ~+~ 1}\, z^{n \,+\, 1}(\varphi)\,\bigg|_0^{2\,\pi}	~~=~~	0\,.
+\]
+	That is --- except when $ n ~=~ -1 $ --- in which case the integrand is a constant.
+	This constant then integrates to the celebrated value of $ 2\, \pi\, i $:
+\[
+	a_{-1}\, \oint\, \frac{dz}{z}	~~=~~	i\, a_{-1}\, \int_0^{2\,\pi}\, d\varphi	~~=~~	2\,\pi\,i \,\cdot\, a_{-1}\,.
+\]
+	What really happens, and what is easier to explain --- but what is not typically done during such an introductory lecture
+	because of the lack of the mathematical basis, which is only being introduced --- is the following.
+	Let us take a na\"{i}ve integral of any integer power of $ z $, the same way as we would compute one of a real function of $ x $,
+\[
+	\int\, z^n\,dz	~~=~~	\frac{1}{n \,+\, 1}\, z^{n \,+\, 1}\,.
+\]
+	Now, when we evaluate $ z $ at the beginning and at the end of the contour, we realise that we have to ``calculate''
+	$ z^{n \,+\, 1} $ at one at the same point (say, $ z ~=~ 1 $).
+	And so the integral vanishes.
+	But when we pick the power $ 1/z $, this formula no longer works --- the integral no longer yields an integer power of $ z $.
+	Instead, it gives us the logarithm,
+\[
+	\int\, \frac{dz}{z}	~~=~~	\log\,z\,.
+\]
+	At this point we realise, that the logarithm is \emph{not} evaluated at one and the same point.
+	It is instead evaluated at the same position on two different branches of the Riemann surface of the logarithm.
+	Hence the $ 2\,\pi\, i $.
+
+	We now re--phrase this conclusion, to emphasize it --- the reason that the integral of $ dz / z $ around a closed contour,
+	has given a non--zero result (in contrast to all other powers of $ z $), is that the contour in fact is \emph{not closed}
+
+	A na\"ive student, beginning to study Complex Analysis, would think, that an integral of a (smooth) function should not depend on the \emph{path} of the integration.
+	Otherwise, it is not quite clear how to compute integrals.
+	And therefore an integral of any function around a closed contour should vanish.
+	And we can see that such na\"ive thinking, applied to holomorphic functions, almost works, except for the case of a prime pole, when the contour, strictly speaking,
+	is not closed
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip 0.8cm
+\centerline{*\qquad\qquad\qquad*\qquad\qquad\qquad*}
+\vskip 0.6cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	Of course, everything that we have just described has been known for almost two hundred years.
+	However, one can still ask some quite na\"ive questions.
+	We can state, that the integral of any holomorphic function around a closed contour vanishes,
+	provided that the contour is in fact closed.
+	The reason that functions have residues, is that when we try to encircle their poles by a contour,
+	we end up with a non--closed contour.
+	The contour
+\[
+\]
+	around the origin does not end at the same point where it began (we will talk about why, in a moment).
+\[
+	\text{But is it possible to \emph{close} this contour, such that the integral along it \emph{would} vanish?}
+\]
+	Now, indeed, why do we say that the contour around the origin is not closed?
+	To this end, function $ f(z) ~=~ 1 / z $ is smooth and single--valued, it does \emph{not} have any branch cuts.
+	Yet, when we calculate its integral we end up with a multi--branch function.
+	How does that happen?
+
+	Well, there is nothing mysterious.
+	When we say that we ``calculate'' the integral
+\[	
+	\int\, z^n\, dz\,,
+\]
+	we in fact imply that the 1--form $ z^{n}\,dz $ is exact, and,
+\[
+	z^n\,dz	~~=~~	\frac{1}{n \,+\, 1}\, d\,z^{n \,+\, 1}\,.
+\]
+	Then, applying integration to both sides, we end up with the function $ z^{n \,+\, 1} $.
+	This argument does not pass through with the function $ 1 / z $.
+	The 1--form $ dz/z $ is \emph{closed}, but not \emph{exact},
+\[
+	\frac{dz}{z}	~~\neq~~	d\,\log\,z\,.
+\]
+	Locally, these two forms are equal everywhere (except for the branch cut), but not globally.
+	They cannot possibly be equal globally, just for the fact that the logarithm is a multi--valued function,
+	and has a branch cut (which, although not a singularity of course, in this comparison can be viewed as a ``discontinuity'').
+	Function $ dz / z $, in contrast, is perfectly smooth and defined everywhere on the normal complex plane, 
+	just less the origin.
+
+	This means, that the form $ dz / z $ in the equality
+\beq
+\label{int-dz-z}
+	\int\, \frac{dz} z	~~=~~	\log\,z\,,
+\eeq
+	is not entirely the same as one would normally think,
+	but rather, its extension to the Riemann surface of the logarithm.
+	With this clarification, the equality \eqref{int-dz-z} is correct.
+	So, we have had to \emph{extend} function $ 1 / z $ to the Riemann surface of $ \log z $,
+	and only then could we perform the integration.
+
+	The following questions arise, 
+\begin{align*}
+	& \text{did function $ 1 / z $ in fact know that its integral would be multi--valued?}\\[2mm]
+	& \text{did it have that information encoded anywhere?}
+\end{align*}
+
+	It turns out that yes, in a way, it did know that.
+	As for question (??), it \emph{is} possible to close the contour $ \gamma $ in such a way,
+	that the integral around it would vanish.
+	In order to do that, however, we need to step out of the complex plane.
+	On that path, we realise that we are entering a whole new world.
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                             A N A L Y T I C I T Y                            %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analyticity}
+\label{section-dirac}
+\setcounter{equation}{0}
+
+	In this section we explain why we do \emph{not} address the issue of quaternionic analiticity in this work.
+	The issue becomes apparent during the variable counting
+
+	Consider arbitrary complex functions $ f(z,~ \ov z) $.
+	These consist of two real functions of two real variables.
+	In terms of the real--valued analysis, a derivative of a complex function is a $ 2 \times 2 $ symmetric real matrix,
+\[
+	\p f(z, ~\ov z) 	~~=~~	\p \bigl( u ~+~ i\, v \bigr)	~~=~~
+		\lgr \begin{matrix}\,\,
+			\p_x\, u	&	\p_y\, u	\\[2mm]
+			\p_x\, v	&	\p_y\, v
+		\,\,\end{matrix} \rgr\!\!.
+\]
+	This derivative can also as well be described in terms of two complex derivatives --- $ \p_z f $ and $ \p_{\ov z} f $
+
+	The complex analyticity condition
+\beq
+\label{complex-analyticity}
+	\partial_{\ov z}\, f(z,~ \ov z)	~~=~~	 0\,,
+\eeq
+	imposes two real conditions, leaving us with two independent real functions, which form a single, holomorphic function.
+	It makes sense to denote such a function as $ f(z) $ because condition \eqref{complex-analyticity} implies that
+	this function is independent of $ \ov z $ as of a linear combination $ x \,-\, i y $.
+	This condition also implies that integration of $ f(z) $ can be written and performed in the conventional real--analysis fashion,
+\[
+	f(b)  ~-~  f(a)		~~=~~	\int_a^b\, \p f			~~=~~
+		\int_a^b\, \p_z\,f(z)\, dz\,.
+\]
+
+	In contrast, a general quaternionic function consists of four functions of four real variables.
+	Therefore, a derivative of such a function is a $ 4 \times 4 $ symmetric matrix
+\[
+	\p\, f(q)	~~=~~
+		\lgr \begin{matrix}\,\,
+			\p_t\, f_0	&	\p_x\, f_0	&	...	&	\p_z\,f_1	\\[2mm]
+					&	...		&	...	&			\\[2mm]
+					&	...		&	...	&			\\[2mm]
+			\p_t\,f_3	&	...		&	...	&	\p_z\,f_3
+		\,\,\end{matrix} \rgr\!\!,
+\]
+	which would require \emph{four} quaternionic derivative functions for an equivalent description.
+	And this is what we will have to do --- we will introduce four linearly independent quaternionic derivatives.
+
+	But the real problem now is that, unlike in the complex case, one cannot require ``analytical'' functions 
+	to be independent from any linear combination other than 
+	$ t \,+\, \ii x \,+\, \jj y \,+\, \kk z $.
+	This is because variables $ t $, $ x $, $ y $ and $ z $ can each be represented as an ``analytical function'' of $ q $.
+	And therefore, any smooth four--component function of real variables $ t $, $ x $, $ y $ and $ z $ must be considered
+	an analytical quaternionic function.
+	Otherwise the analyticity conditions become too restrictive.
+
+	This does not preclude certain choices of ``preferred'' conditions of analyticity, as we will discuss below,
+	but they are still too restrictive in our opinion.
+
+	The problem now is that it is almost meaningless to perform integration of a quaternionic function along a path by itself.
+	While this would lead to a certain numerical or algebraic result, it would not be related to what we wish to call an integral of a function.
+	In other words,
+\[
+	\p\,f(q)\,dq	~~\neq~~	df(q)\,.
+\]
+	Instead, all four linearly independent quaternionic derivatives would have to be involved in order to find the ``change'' of the antideritavive
+	as the result,
+\[
+	df(q)		~~=~~
+		\frac{  \p\,f(q)\,dq	~+~	\p_{(\ii)}\,f(q)\,dq^{(\ii)}	~+~	\p_{(\jj)}\,f(q)\,dq^{(\jj)}	~+~	\p_{(\kk)}\,f(q)\,dq^{(\kk)} }
+			{  4  }~.
+\]
+	We call such derivatives \emph{sister} derivatives to the original derivative $ \p f(q) $, and introduce them in the Section~\ref{section-conjugations}.
+
+	In other words, all four sister derivatives need to be known in order to perform quaternionic integration.
+	Or, in general, one needs four functions in order to perform integration along a contour.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                          P U R E   F U N C T I O N S                         %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pure functions}
+
+	How does this help us with integrating our function $ 1 / z $?
+	This function is a derivative of $ \log\, z $, but do we know its sister derivatives?
+
+	Before addressing these questions let us introduce a concept of \emph{pure} functions.
+	Any algebraic complex analytical function $ f(z) $ can be easily promoted to a quaternionic function $ f(q) $:
+\[
+	f(z)	~~=~~	e^z		\qquad\qquad\longrightarrow\qquad\qquad		f(q)	~~=~~	e^q\,.
+\]
+	We call such functions \emph{pure}, because they do not involve fixed quaternionic constants.
+	A more precise definition can be done, but is not necessary for what follows
+	It is obvious that any analytical complex function can be promoted this way,
+\[
+	\sin z	\qquad\longrightarrow\qquad	\sin q\,,\qquad\qquad
+	\log z \qquad\longrightarrow\qquad	\log q\,.
+\]
+
+	While such functions not necessarily are useful for the quaternionic analysis that we are going to dive into,
+	they are useful in relating the quaternionic properties that we find for them to their complex counterparts
+
+
+	TODO: discuss the mapping of $ i $
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            C O N J U G A T I O N S                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjugations}
+\label{section-conjugations}
+\setcounter{equation}{0}
+
+	We need to elaborate on the concept of the quaternionic conjugation and introduce the relevant notations.
+	Given a quaternion
+\[
+	q	~~=~~	t  ~~+~~  \ii\, x  ~~+~~  \jj\, y  ~~+~~  \kk\, z\,,
+\]
+	we denote the usual quaternionic conjugate of $ q $ as
+\beq
+\label{q-conj}
+	\wt q	~~=~~	t  ~~-~~  \ii\, x  ~~-~~  \jj\, y  ~~-~~  \kk\, z\,.
+\eeq
+
+	We then introduce directional quaternionic conjugates,
+\begin{align}
+%
+\notag
+	q^{(\ii)}	& ~~=~~	-\,\ii\, q \, \ii	~~=~~	t  ~~+~~  \ii\, x  ~~-~~  \jj\, y  ~~-~~  \kk\, z\,,
+	\\[2mm]
+%
+\label{q-dir-conj}
+	q^{(\jj)}	& ~~=~~	-\,\ii\, q \, \ii	~~=~~	t  ~~-~~  \ii\, x  ~~+~~  \jj\, y  ~~-~~  \kk\, z\,,
+	\\[2mm]
+%
+\notag
+	q^{(\kk)}	& ~~=~~	-\,\ii\, q \, \ii	~~=~~	t  ~~-~~  \ii\, x  ~~-~~  \jj\, y  ~~+~~  \kk\, z\,,
+\end{align}
+	and in general, for any unit vector $ \hat a $,
+\beq
+	q^{(\hat a)}	~~=~~	-\, \hat a\, q \, \hat a\,.
+\eeq
+	The composition of the conjugations \eqref{q-dir-conj} can be readily found,
+\[
+	\big(\, q^{(\ii)} \,\big)^{(\jj)}	~~=~~	\big(\, q^{(\jj)} \,\big)^{(\ii)}	~~=~~	q^{(\kk)}\,,
+	\qquad\qquad
+	\big(\, q^{(\ii)} \,\big)^{(\ii)}	~~=~~	q\,.
+\]
+	These are valid of course as long as $ \ii $, $ \jj $ and $ \kk $ are all orthogonal
+	
+	We notice that the conjugations \eqref{q-dir-conj} always flip \emph{two} signs.
+	In contrast, any composition with the regular quaternionic conjugation \eqref{q-conj} will flip an odd number of signs,
+\[
+	\overset{\wt{~~~}}{\big(\, q^{(\ii)} \,\big)}		~~=~~	t  ~~-~~  \ii\, x  ~~+~~  \jj\, y  ~~+~~  \kk\, z\,.
+\]
+
+	We observe that the conjugations \eqref{q-dir-conj} and \eqref{q-conj} are all completely interchangeable,
+\[
+	\overset{\wt{~~~}}{\big(\, q^{(\ii)} \,\big)}	~~=~~	\big(\, \wt{q} \,\big)^{(\ii)}\,.
+\]
+	The following obvious identities can be easily inferred,
+\begin{align*}
+%
+	\big(\, a\, b \,\big)^{(\ii)}	& ~~=~~		a^{(\ii)}\, b^{(\ii)}\,,
+	\\[2mm]
+%
+	\big(\, a\, \wt b \,)^{(\ii)}	& ~~=~~		\wt b{}^{(\ii)}\, \wt a{}^{(\ii)}\,,
+	\\[2mm]
+%
+	a^{(\ii)}\, b~~~		& ~~=~~		\big(\, a\, b^{(\ii)} \big)^{(\ii)}\,.
+\end{align*}
+	We can also use the directed conjugations to isolate any component of $ q $,
+\begin{align}
+%
+\notag
+	t	& ~~=~~	\frac 1 4\, \Big\{\,  q  ~+~  q^{(\ii)}  ~+~  q^{(\jj)}  ~+~  q^{(\kk)} \Big\}\,,
+	\\[2mm]
+%
+\notag
+	x	& ~~=~~	\frac{1}{4\,\ii}\, \Big\{\,  q  ~+~  q^{(\ii)}  ~-~  q^{(\jj)}  ~-~  q^{(\kk)} \Big\}\,,
+	\\[2mm]
+%
+\label{comp-from-conj}
+	y	& ~~=~~	\frac{1}{4\,\jj}\, \Big\{\,  q  ~-~  q^{(\ii)}  ~+~  q^{(\jj)}  ~-~  q^{(\kk)} \Big\}\,,
+	\\[2mm]
+%
+\notag
+	z	& ~~=~~	\frac{1}{4\,\kk}\, \Big\{\,  q  ~-~  q^{(\ii)}  ~-~  q^{(\jj)}  ~+~  q^{(\kk)} \Big\}\,,
+\end{align}
+	or even express $ \wt{q} $ in terms of them,
+\[
+	\wt q 	~~=~~ 	\frac 1 4\, \Big\{\,  q  ~-~  q^{(\ii)}  ~-~  q^{(\jj)}  ~-~  q^{(\kk)}  \,\}\,.
+\]	
+	While being very trivial, identities \eqref{q-dir-conj} and \eqref{comp-from-conj} make it especially obvious,
+	that any real--analytical function of coordinates $ t $, $ x $, $ y $ and $ z $
+	is essentially an analytical function of quaternions,
+	and it is not possible to demand a function to only depend on a certain linear combination of these coordinates
+	(which is what is done in the definition of complex analyticity)
+
+	The following quite trivial identity will be found useful,
+\[
+%
+	\text{Re}~ q	~~=~~	\text{Re}~ \wt q	~~=~~	
+	\text{Re}~ q^{(\ii)}	~~=~~	\text{Re}~ q^{(\jj)}	~~=~~	\text{Re}~ q^{(\kk)}\,.
+\]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                          S C A L A R   P R O D U C T                         %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Scalar Product}
+	
+	For what follows, it is necessary to introduce the notations for the ``scalar product'' for quaternions.
+	We will be denoting the scalar product both for quaternions and for $ 3 $--vectors using angle brackets,
+\begin{align*}
+%
+	\langle\, a,\, b \,\rangle		& ~~=~~		a_\mu\, b^\mu	~~=~~	
+		a^0\, b^0  ~~+~~  a^1\, b^1  ~~+~~  a^2\, b^2  ~~+~~  a^3\, b^3\,,
+	\\[2mm]
+%
+	\langle\, \vec a,\, \vec b \,\rangle	& ~~=~~  a^1\, b^1  ~~+~~  a^2\, b^2  ~~+~~  a^3\, b^3\,,
+\end{align*}
+	where we now have used the usual index notations for the components of $ 3 $-- and $ 4 $--vectors
+
+	It is trivial to express the scalar product of two quaterions in terms of their conjugates,
+\[
+	\langle\, a,\, b \,\rangle
+	~~=~~	\frac 1 2\, \Big\{\, \wt a\, b  ~+~  \wt b\, a \,\Big\}
+	~~=~~	\frac 1 2\, \Big\{\, a\, \wt b  ~+~  b\, \wt a \,\Big\}\,.
+\]
+	Essentially, the usual quaternionic conjugation turns a contravariant $ 4 $--vector into a covariant one
+
+	Similarly, and suddenly more interestingly, the directed conjugates can be used,
+\begin{align}
+%
+\notag
+	\langle\, a,\, b \,\rangle
+	& ~~=~~	\frac 1 4\, \Big\{\, \wt a\, b  ~~+~~  \wt a^{(i)}\, b^{(i)}  ~~+~~  \wt a^{(j)}\, b^{(j)}  ~~+~~  \wt a^{(k)}\, b^{(k)} \,\Big\}
+	\\[2mm]
+%
+	& ~~=~~	\frac 1 4\, \Big\{\, a\, \wt b  ~~+~~  a^{(i)}\, \wt b^{(i)}  ~~+~~  a^{(j)}\, \wt b^{(j)}  ~~+~~  a^{(k)}\, \wt b^{(k)} \,\Big\}
+	\,.
+\end{align}
+	These expressions are invariant under any of the conjugations that we have introduced, as well as
+	under replacing $ a $ $ \leftrightarrow $ $ b $
+
+	However, if we now introduce the greek--letter notation for the directed conjugates,
+\[
+	q^{(\mu)}:\qquad	q^{(0)}		~~\equiv~~	q\,,\qquad
+	q^{(1)}		~~\equiv~~		q^{(\ii)}\,,\qquad
+	q^{(2)}		~~\equiv~~		q^{(\jj)}\,,\qquad
+	q^{(3)}		~~\equiv~~		q^{(\kk)}\,,
+\]
+	the scalar product can suddenly be written in a compact way,
+\beq
+\label{scalar-product}
+	\langle\, a,\, b \,\rangle
+	~~=~~	\frac 1 4\, \wt a_{(\mu)}\, b^{(\mu)}
+	~~=~~	\frac 1 4\, a^{(\mu)}\, \wt b_{(\mu)}\,.
+\eeq
+	Since the expression on the left--hand side is real,
+	the expressions on the right--hand side do not depend on the order of $ a $ and $ b $,
+	despite that all of them are, in fact, quaternions.
+
+	Expression \eqref{scalar-product} is now, unexpectedly, 
+	very similar to the usual expression for the scalar product $ a_\mu\, b^\mu $.
+	We chose to lower index $ (\mu) $ on $ \wt b $ just for convience and for this resemblance.
+	Despite that $ q^{(\mu)} $ looks like ``components'' of vector $ q $, they are, of course, 
+	not its components, nor are they even real.
+	
+	However, it is because of this resemblance that we will be able to manage quaternionic expressions
+	involved into integration and differentiation 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            D I F F E R E N T I A L                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Differential}
+\label{section-dirac}
+\setcounter{equation}{0}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                             D E R I V A T I V E S                            %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Derivatives}
+\label{section-dirac}
+\setcounter{equation}{0}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                               L O G A R I T H M                              %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Logarithm}
+\label{section-dirac}
+\setcounter{equation}{0}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                             I N T E G R A T I O N                            %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integration}
+\label{section-dirac}
+\setcounter{equation}{0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                             C O N C L U S I O N S                            %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                          A C K N O W L E D G M E N T S                       %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgements}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                                A P P E N D I X                               %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\appendix
+\setcounter{equation}{0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                                 S P I N O R S                                %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spinors}
+\label{section-spinors}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            B I B L I O G R A P H Y                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\small
+\begin{thebibliography}{99}
+\itemsep -2pt
+
+  %\cite{Adler:1988hb}
+  \bibitem{Adler:1988hb} 
+  S.~L.~Adler,
+  %``Quaternionic quantum mechanics and quantum fields,''
+  New York, USA: Oxford Univ. Pr. (1995) 586 p. (International series of monographs on physics, 88)
+
+  %\cite{Maxwell}
+  \bibitem{Maxwell}
+  J.~C.~Maxwell,
+  {\it A Treatise on Electricity and Magnetism},
+  Oxford, Clarendon Press (1873)
+
+  %\cite{Tait}
+  \bibitem{Tait}
+  P.~G.~Tait,
+  {\it An Elementary Treatise on Quaternions},
+  Cambridge University Press (1890)
+
+  %\cite{Finkelstein:1961tk}
+  \bibitem{Finkelstein:1961tk} 
+  D.~Finkelstein, J.~M.~Jauch and D.~Speiser,
+  %``Foundations of quaternion quantum mechanics,''
+  J.\ Math.\ Phys.\  {\bf 3}, 207 (1962).
+  doi:10.1063/1.1703794
+  %%CITATION = doi:10.1063/1.1703794;%%
+
+  %\cite{Finkelstein:1962tj}
+  \bibitem{Finkelstein:1962tj} 
+  D.~Finkelstein, J.~M.~Jauch, S.~Schminovich and D.~Speiser,
+  %``Principle of general Q covariance,''
+  J.\ Math.\ Phys.\  {\bf 4}, 788 (1963).
+  doi:10.1063/1.1724320
+  %%CITATION = doi:10.1063/1.1724320;%%
+
+  %\cite{Edmonds:1972vd}
+  \bibitem{Edmonds:1972vd} 
+  J.~D.~Edmonds,
+  %``Nature's natural numbers - relativistic quantum theory over the ring of complex quaternions,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 6}, 205 (1972).
+  doi:10.1007/BF00672074
+  %%CITATION = doi:10.1007/BF00672074;%%
+
+  %\cite{Edmonds:1973pp}
+  \bibitem{Edmonds:1973pp} 
+  J.~D.~Edmonds,
+  %``Possible baryon conservation from quaternion charge,''
+  Lett.\ Nuovo Cim.\  {\bf 7S2}, 398 (1973)
+  [Lett.\ Nuovo Cim.\  {\bf 7}, 398 (1973)].
+  doi:10.1007/BF02735143
+  %%CITATION = doi:10.1007/BF02735143;%%
+
+  %\cite{Edmonds:1974yq}
+  \bibitem{Edmonds:1974yq} 
+  J.~D.~Edmonds,
+  %``Quaternion wave equations in curved space-time,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 10}, 115 (1974).
+  doi:10.1007/BF01810397
+  %%CITATION = doi:10.1007/BF01810397;%%
+
+  %\cite{Gunaydin:1973rs}
+  \bibitem{Gunaydin:1973rs} 
+  M.~Gunaydin and F.~Gursey,
+  %``Quark structure and octonions,''
+  J.\ Math.\ Phys.\  {\bf 14}, 1651 (1973).
+  doi:10.1063/1.1666240
+  %%CITATION = doi:10.1063/1.1666240;%%
+
+  %\cite{Gunaydin:1974fb}
+  \bibitem{Gunaydin:1974fb} 
+  M.~Gunaydin and F.~Gursey,
+  %``Quark Statistics and Octonions,''
+  Phys.\ Rev.\ D {\bf 9}, 3387 (1974).
+  doi:10.1103/PhysRevD.9.3387
+  %%CITATION = doi:10.1103/PhysRevD.9.3387;%%
+
+  %\cite{Gough:1986}
+  \bibitem{Gough:1986}
+  W.~Gough,
+  %``The analysis of spin and spin-orbit coupling in quantum and classical physics by quaternions,''
+  Eur.\ J.\ Phys.\ {\bf 7}, 35 (1986).
+  doi:10.1088/0143-0807/7/1/007
+  %%CITATION = doi:10.1088/0143-0807/7/1/007;%%
+
+  %\cite{Gough:1989}
+  \bibitem{Gough:1989}
+  W.~Gough,
+  %``A quaternion expression for the quantum mechanical probability and current densities,''
+  Eur.\ J.\ Phys.\ {\bf 10}, 188 (1989).
+  doi:10.1088/0143-0807/10/3/005
+  %%CITATION = doi:10.1088/0143-0807/10/3/005;%%
+
+  %\cite{DeLeo:1995ww}
+  \bibitem{DeLeo:1995ww} 
+  S.~De Leo,
+  %``One component Dirac equation,''
+  Int.\ J.\ Mod.\ Phys.\ A {\bf 11}, 3973 (1996)
+  doi:10.1142/S0217751X96001863
+  [hep-th/9508010].
+  %%CITATION = doi:10.1142/S0217751X96001863;%%
+
+  %\cite{DeLeo:1995yq}
+  \bibitem{DeLeo:1995yq} 
+  S.~De Leo and P.~Rotelli,
+  %``The Quaternionic Dirac Lagrangian,''
+  Mod.\ Phys.\ Lett.\ A {\bf 11}, 357 (1996)
+  doi:10.1142/S0217732396000400
+  [hep-th/9509059].
+  %%CITATION = doi:10.1142/S0217732396000400;%%
+
+  %\cite{DeLeo:1997yj}
+  \bibitem{DeLeo:1997yj} 
+  S.~De Leo and W.~A.~Rodrigues, Jr.,
+  %``Quaternionic electron theory: Geometry, algebra and Dirac's spinors,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 37}, 1707 (1998)
+  doi:10.1023/A:1026692508708
+  [hep-th/9806058].
+  %%CITATION = doi:10.1023/A:1026692508708;%%
+
+  %\cite{DeLeo:1998yi}
+  \bibitem{DeLeo:1998yi} 
+  S.~De Leo and W.~A.~Rodrigues, Jr.,
+  %``Quaternionic electron theory: Dirac's equation,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 37}, 1511 (1998)
+  doi:10.1023/A:1026611718277
+  [hep-th/9806057].
+  %%CITATION = doi:10.1023/A:1026611718277;%%
+
+  %\cite{DeLeo:2000ik}
+  \bibitem{DeLeo:2000ik}
+  S.~De Leo,
+  %``Quaternionic Lorentz group and Dirac equation,''
+  Found.\ Phys.\ Lett.\  {\bf 14}, no. 1, 37 (2001)
+  doi:10.1023/A:1012077227985
+  [hep-th/0103129].
+  %%CITATION = doi:10.1023/A:1012077227985;%%
+
+  %\cite{Furey:2010fm}
+  \bibitem{Furey:2010fm} 
+  C.~Furey,
+  %``Unified Theory of Ideals,''
+  Phys.\ Rev.\ D {\bf 86}, 025024 (2012)
+  doi:10.1103/PhysRevD.86.025024
+  [arXiv:1002.1497 [hep-th]].
+  %%CITATION = doi:10.1103/PhysRevD.86.025024;%%
+
+  %\cite{Furey:2014iwa}
+  \bibitem{Furey:2014iwa} 
+  C.~Furey,
+  %``Generations: Three Prints, in Colour,''
+  JHEP {\bf 1410}, 046 (2014)
+  doi:10.1007/JHEP10(2014)046
+  [arXiv:1405.4601 [hep-th]].
+  %%CITATION = doi:10.1007/JHEP10(2014)046;%%
+
+  %\cite{Furey:2015tqa}
+  \bibitem{Furey:2015tqa} 
+  C.~Furey,
+  %``Charge quantization from a number operator,''
+  Phys.\ Lett.\ B {\bf 742}, 195 (2015)
+  doi:10.1016/j.physletb.2015.01.023
+  [arXiv:1603.04078 [hep-th]].
+  %%CITATION = doi:10.1016/j.physletb.2015.01.023;%%
+
+  %\cite{Bisht:2007ju}
+  \bibitem{Bisht:2007ju} 
+  P.~S.~Bisht and O.~P.~S.~Negi,
+  %``Revisiting quaternionic dual electrodynamics,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 47}, 3108 (2008)
+  doi:10.1007/s10773-008-9744-8
+  [arXiv:0709.0088 [hep-th]].
+  %%CITATION = doi:10.1007/s10773-008-9744-8;%%
+
+  %\cite{Rawat:2011ch}
+  \bibitem{Rawat:2011ch} 
+  A.~S.~Rawat and O.~P.~S.~Negi,
+  %``Quaternion Gravi-Electromagnetism,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 51}, 738 (2012)
+  doi:10.1007/s10773-011-0953-1
+  [arXiv:1107.0916 [physics.gen-ph]].
+  %%CITATION = doi:10.1007/s10773-011-0953-1;%%  
+
+  %\cite{Chanyal:2012rj}
+  \bibitem{Chanyal:2012rj} 
+  B.~C.~Chanyal, P.~S.~Bisht, T.~Li and O.~P.~S.~Negi,
+  %``Octonion Quantum Chromodynamics,''
+  Int.\ J.\ Theor.\ Phys.\  {\bf 51}, 3410 (2012)
+  doi:10.1007/s10773-012-1222-7
+  [arXiv:1204.0242 [physics.gen-ph]].
+  %%CITATION = doi:10.1007/s10773-012-1222-7;%%
+
+  %\cite{thesis}
+  \bibitem{thesis}
+  C.~Furey,
+  %``Standard model physics from an algebra?,''
+  arXiv:1611.09182 [hep-th].
+  %%CITATION = ARXIV:1611.09182;%%
+
+  %\cite{girard}
+  \bibitem{girard}
+  P.~Girard,
+  {\it Quaternions, Clifford algebras and relativistic physics},
+  Birkh\"auser Verlag (2007).
+
+  %\cite{sudbery}
+  \bibitem{sudbery}
+  A.~Sudbery,
+  {\it Quaternionic Analysis},
+  Math.\ Proc.\ Camb.\ Math.\ Soc.\  {\bf 85} (1979), 199-225.
+
+  %\cite{frenkel}
+  \bibitem{frenkel}
+  I.~Frenkel, M.~Libine,
+  {\it Quaternionic analysis, representation theory and physics},
+  Adv.\ Math.\  {\bf 218} (2008), 1806-1877
+  doi:10.1016/j.aim.2008.03.021
+  %%CITATION = doi:10.1016/j.aim.2008.03.021;%%
+
+  %\cite{Berestetsky:1982aq}
+  \bibitem{Berestetsky:1982aq} 
+  V.~B.~Berestetskii, E.~M.~Lifshitz and L.~P.~Pitaevskii,
+  {\it Quantum Electrodynamics},
+  2nd ed.,
+  Oxford, New York: Pergamon Press, 1982.
+  %%CITATION = INSPIRE-185062;%%
+\end{thebibliography}
+
+
+\end{document}
